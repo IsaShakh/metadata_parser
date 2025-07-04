@@ -37,4 +37,24 @@ http://localhost:8000/docs
 ```
 
 ## Миграции БД
+Применение миграций:
+```bash
+docker-compose run --rm web alembic upgrade head
+```
 
+## REST API
+1. Загрузка файла, парсинг метаданных, сохранение в БД и JSON
+```bash
+POST /api/suip-data/parse
+```
+Параметры:
+file: UploadFile — файл для анализа
+
+2. Получение списка сохранённых файлов и метаданных
+```bash
+GET /api/suip-data
+```
+Параметры:
+filename - фильтрация по подстроке в имени файла
+key - фильтрация по ключу метаданных
+value - фильтрация по значению метаданных
