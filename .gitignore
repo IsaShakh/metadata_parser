@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environments
+.env
+.venv/
+venv/
+*.sqlite3
+
+# VSCode / PyCharm
+.idea/
+.vscode/
+
+# Docker
+*.log
+*.pid
+*.seed
+*.bak
+*.swp
+*.orig
+
+# Pytest
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Alembic
+alembic/versions/*.pyc
